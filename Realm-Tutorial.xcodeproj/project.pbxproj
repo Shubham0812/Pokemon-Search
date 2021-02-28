@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAF98E1625EB9C320052EDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */; };
-		DAF98E1825EB9C320052EDB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1725EB9C320052EDB8 /* SceneDelegate.swift */; };
-		DAF98E1A25EB9C320052EDB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1925EB9C320052EDB8 /* ViewController.swift */; };
+		DAF98E1A25EB9C320052EDB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */; };
 		DAF98E1D25EB9C320052EDB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E1B25EB9C320052EDB8 /* Main.storyboard */; };
 		DAF98E1F25EB9C350052EDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */; };
 		DAF98E2225EB9C350052EDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E2025EB9C350052EDB8 /* LaunchScreen.storyboard */; };
@@ -37,8 +36,7 @@
 /* Begin PBXFileReference section */
 		DAF98E1225EB9C320052EDB8 /* Realm-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAF98E1725EB9C320052EDB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAF98E1925EB9C320052EDB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DAF98E1C25EB9C320052EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF98E2125EB9C350052EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF98E1425EB9C320052EDB8 /* Realm-Tutorial */,
+				DAF98E2025EB9C350052EDB8 /* LaunchScreen.storyboard */,
 				DAF98E2B25EB9C350052EDB8 /* Realm-TutorialTests */,
 				DAF98E3625EB9C350052EDB8 /* Realm-TutorialUITests */,
 				DAF98E1325EB9C320052EDB8 /* Products */,
@@ -99,13 +98,8 @@
 		DAF98E1425EB9C320052EDB8 /* Realm-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */,
-				DAF98E1725EB9C320052EDB8 /* SceneDelegate.swift */,
-				DAF98E1925EB9C320052EDB8 /* ViewController.swift */,
-				DAF98E1B25EB9C320052EDB8 /* Main.storyboard */,
-				DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */,
-				DAF98E2025EB9C350052EDB8 /* LaunchScreen.storyboard */,
-				DAF98E2325EB9C350052EDB8 /* Info.plist */,
+				DAF98E4825EB9C890052EDB8 /* Code */,
+				DAF98E5125EB9D250052EDB8 /* Resources */,
 			);
 			path = "Realm-Tutorial";
 			sourceTree = "<group>";
@@ -126,6 +120,65 @@
 				DAF98E3925EB9C350052EDB8 /* Info.plist */,
 			);
 			path = "Realm-TutorialUITests";
+			sourceTree = "<group>";
+		};
+		DAF98E4825EB9C890052EDB8 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E4925EB9C900052EDB8 /* Controllers */,
+				DAF98E5025EB9D190052EDB8 /* Modules */,
+				DAF98E5825EB9DFB0052EDB8 /* Services */,
+				DAF98E6325EB9E430052EDB8 /* Utils */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		DAF98E4925EB9C900052EDB8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DAF98E5025EB9D190052EDB8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */,
+				DAF98E1B25EB9C320052EDB8 /* Main.storyboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DAF98E5125EB9D250052EDB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E6225EB9E3F0052EDB8 /* Fonts */,
+				DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */,
+				DAF98E2325EB9C350052EDB8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAF98E5825EB9DFB0052EDB8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAF98E6225EB9E3F0052EDB8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DAF98E6325EB9E430052EDB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF98E1A25EB9C320052EDB8 /* ViewController.swift in Sources */,
+				DAF98E1A25EB9C320052EDB8 /* HomeViewController.swift in Sources */,
 				DAF98E1625EB9C320052EDB8 /* AppDelegate.swift in Sources */,
-				DAF98E1825EB9C320052EDB8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXZ7XFH447;
-				INFOPLIST_FILE = "Realm-Tutorial/Info.plist";
+				INFOPLIST_FILE = "Realm-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXZ7XFH447;
-				INFOPLIST_FILE = "Realm-Tutorial/Info.plist";
+				INFOPLIST_FILE = "Realm-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
