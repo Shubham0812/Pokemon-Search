@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct ImageCache {
+    static var shared: ImageCache = {
+        return ImageCache()
+    }()
+    
+    var imageMap: [Int : Data] = [:]
+}
