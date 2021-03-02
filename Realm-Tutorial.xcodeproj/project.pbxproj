@@ -3,17 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DAF98E1625EB9C320052EDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */; };
 		DAF98E1A25EB9C320052EDB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */; };
-		DAF98E1D25EB9C320052EDB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E1B25EB9C320052EDB8 /* Main.storyboard */; };
+		DAF98E1D25EB9C320052EDB8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E1B25EB9C320052EDB8 /* Home.storyboard */; };
 		DAF98E1F25EB9C350052EDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */; };
 		DAF98E2225EB9C350052EDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E2025EB9C350052EDB8 /* LaunchScreen.storyboard */; };
 		DAF98E2D25EB9C350052EDB8 /* Realm_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E2C25EB9C350052EDB8 /* Realm_TutorialTests.swift */; };
 		DAF98E3825EB9C350052EDB8 /* Realm_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E3725EB9C350052EDB8 /* Realm_TutorialUITests.swift */; };
+		DAF98E6525EBA5620052EDB8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E6425EBA5620052EDB8 /* RealmManager.swift */; };
+		DAF98E6D25EBA7950052EDB8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */; };
+		DAF98E7325EBA9310052EDB8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DAF98E7225EBA9310052EDB8 /* Realm */; };
+		DAF98E7525EBA9310052EDB8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAF98E7425EBA9310052EDB8 /* RealmSwift */; };
+		DAF98E7B25EBE3550052EDB8 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */; };
+		DAF98E9025ECF9CA0052EDB8 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E8E25ECF9CA0052EDB8 /* PokemonTableViewCell.swift */; };
+		DAF98E9125ECF9CA0052EDB8 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E8F25ECF9CA0052EDB8 /* PokemonTableViewCell.xib */; };
+		DAF98E9625ED6C330052EDB8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E9525ED6C330052EDB8 /* Box.swift */; };
+		DAF98EA525ED7B1F0052EDB8 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E9B25ED7B1F0052EDB8 /* OpenSans-Light.ttf */; };
+		DAF98EA625ED7B1F0052EDB8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E9C25ED7B1F0052EDB8 /* OpenSans-Bold.ttf */; };
+		DAF98EA725ED7B1F0052EDB8 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E9D25ED7B1F0052EDB8 /* OpenSans-SemiBold.ttf */; };
+		DAF98EA825ED7B1F0052EDB8 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E9E25ED7B1F0052EDB8 /* OpenSans-ExtraBold.ttf */; };
+		DAF98EA925ED7B1F0052EDB8 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E9F25ED7B1F0052EDB8 /* OpenSans-ExtraBoldItalic.ttf */; };
+		DAF98EAA25ED7B1F0052EDB8 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98EA025ED7B1F0052EDB8 /* OpenSans-SemiBoldItalic.ttf */; };
+		DAF98EAB25ED7B1F0052EDB8 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98EA125ED7B1F0052EDB8 /* OpenSans-BoldItalic.ttf */; };
+		DAF98EAC25ED7B1F0052EDB8 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98EA225ED7B1F0052EDB8 /* OpenSans-LightItalic.ttf */; };
+		DAF98EAD25ED7B1F0052EDB8 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98EA325ED7B1F0052EDB8 /* OpenSans-Italic.ttf */; };
+		DAF98EAE25ED7B1F0052EDB8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF98EA425ED7B1F0052EDB8 /* OpenSans-Regular.ttf */; };
+		DAF98EB525ED7D540052EDB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98EB425ED7D540052EDB8 /* HomeViewModel.swift */; };
+		DAF98EC425EDF93A0052EDB8 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98EC325EDF93A0052EDB8 /* UIColorExtensions.swift */; };
+		DAF98ECD25EE09EC0052EDB8 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98ECB25EE09EB0052EDB8 /* TypeCollectionViewCell.swift */; };
+		DAF98ECE25EE09EC0052EDB8 /* TypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF98ECC25EE09EB0052EDB8 /* TypeCollectionViewCell.xib */; };
+		DAF98ED625EE11300052EDB8 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98ED525EE11300052EDB8 /* ImageCache.swift */; };
+		DAF98EDB25EE5B2F0052EDB8 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98EDA25EE5B2F0052EDB8 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +61,7 @@
 		DAF98E1225EB9C320052EDB8 /* Realm-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DAF98E1C25EB9C320052EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAF98E1C25EB9C320052EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		DAF98E1E25EB9C350052EDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF98E2125EB9C350052EDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF98E2325EB9C350052EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +71,28 @@
 		DAF98E3325EB9C350052EDB8 /* Realm-TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realm-TutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF98E3725EB9C350052EDB8 /* Realm_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_TutorialUITests.swift; sourceTree = "<group>"; };
 		DAF98E3925EB9C350052EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF98E6425EBA5620052EDB8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		DAF98E8E25ECF9CA0052EDB8 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		DAF98E8F25ECF9CA0052EDB8 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
+		DAF98E9525ED6C330052EDB8 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		DAF98E9B25ED7B1F0052EDB8 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		DAF98E9C25ED7B1F0052EDB8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		DAF98E9D25ED7B1F0052EDB8 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		DAF98E9E25ED7B1F0052EDB8 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DAF98E9F25ED7B1F0052EDB8 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		DAF98EA025ED7B1F0052EDB8 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		DAF98EA125ED7B1F0052EDB8 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DAF98EA225ED7B1F0052EDB8 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		DAF98EA325ED7B1F0052EDB8 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		DAF98EA425ED7B1F0052EDB8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		DAF98EB425ED7D540052EDB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DAF98EC325EDF93A0052EDB8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		DAF98ECB25EE09EB0052EDB8 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF98ECC25EE09EB0052EDB8 /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DAF98ED525EE11300052EDB8 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		DAF98EDA25EE5B2F0052EDB8 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF98E7525EBA9310052EDB8 /* RealmSwift in Frameworks */,
+				DAF98E7325EBA9310052EDB8 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +173,9 @@
 		DAF98E4825EB9C890052EDB8 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				DAF98EC225EDF92E0052EDB8 /* Extensions */,
 				DAF98E4925EB9C900052EDB8 /* Controllers */,
+				DAF98E7925EBB3430052EDB8 /* Models */,
 				DAF98E5025EB9D190052EDB8 /* Modules */,
 				DAF98E5825EB9DFB0052EDB8 /* Services */,
 				DAF98E6325EB9E430052EDB8 /* Utils */,
@@ -137,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF98E1525EB9C320052EDB8 /* AppDelegate.swift */,
+				DAF98E9525ED6C330052EDB8 /* Box.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,8 +195,7 @@
 		DAF98E5025EB9D190052EDB8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */,
-				DAF98E1B25EB9C320052EDB8 /* Main.storyboard */,
+				DAF98EB225ED7D350052EDB8 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -163,6 +213,9 @@
 		DAF98E5825EB9DFB0052EDB8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAF98E6425EBA5620052EDB8 /* RealmManager.swift */,
+				DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */,
+				DAF98ED525EE11300052EDB8 /* ImageCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +223,7 @@
 		DAF98E6225EB9E3F0052EDB8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				DAF98E9A25ED7B0E0052EDB8 /* OpenSans */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -179,6 +233,70 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DAF98E7925EBB3430052EDB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAF98E8225ECF8BB0052EDB8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E8E25ECF9CA0052EDB8 /* PokemonTableViewCell.swift */,
+				DAF98E8F25ECF9CA0052EDB8 /* PokemonTableViewCell.xib */,
+				DAF98ECB25EE09EB0052EDB8 /* TypeCollectionViewCell.swift */,
+				DAF98ECC25EE09EB0052EDB8 /* TypeCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DAF98E9A25ED7B0E0052EDB8 /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E9C25ED7B1F0052EDB8 /* OpenSans-Bold.ttf */,
+				DAF98EA125ED7B1F0052EDB8 /* OpenSans-BoldItalic.ttf */,
+				DAF98E9E25ED7B1F0052EDB8 /* OpenSans-ExtraBold.ttf */,
+				DAF98E9F25ED7B1F0052EDB8 /* OpenSans-ExtraBoldItalic.ttf */,
+				DAF98EA325ED7B1F0052EDB8 /* OpenSans-Italic.ttf */,
+				DAF98E9B25ED7B1F0052EDB8 /* OpenSans-Light.ttf */,
+				DAF98EA225ED7B1F0052EDB8 /* OpenSans-LightItalic.ttf */,
+				DAF98EA425ED7B1F0052EDB8 /* OpenSans-Regular.ttf */,
+				DAF98E9D25ED7B1F0052EDB8 /* OpenSans-SemiBold.ttf */,
+				DAF98EA025ED7B1F0052EDB8 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		DAF98EB225ED7D350052EDB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98E8225ECF8BB0052EDB8 /* Cells */,
+				DAF98EB325ED7D480052EDB8 /* ViewModels */,
+				DAF98E1925EB9C320052EDB8 /* HomeViewController.swift */,
+				DAF98E1B25EB9C320052EDB8 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DAF98EB325ED7D480052EDB8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98EB425ED7D540052EDB8 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAF98EC225EDF92E0052EDB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAF98EC325EDF93A0052EDB8 /* UIColorExtensions.swift */,
+				DAF98EDA25EE5B2F0052EDB8 /* FoundationExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +315,10 @@
 			dependencies = (
 			);
 			name = "Realm-Tutorial";
+			packageProductDependencies = (
+				DAF98E7225EBA9310052EDB8 /* Realm */,
+				DAF98E7425EBA9310052EDB8 /* RealmSwift */,
+			);
 			productName = "Realm-Tutorial";
 			productReference = DAF98E1225EB9C320052EDB8 /* Realm-Tutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +390,9 @@
 				Base,
 			);
 			mainGroup = DAF98E0925EB9C320052EDB8;
+			packageReferences = (
+				DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = DAF98E1325EB9C320052EDB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,8 +410,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF98E2225EB9C350052EDB8 /* LaunchScreen.storyboard in Resources */,
+				DAF98EA925ED7B1F0052EDB8 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				DAF98EAC25ED7B1F0052EDB8 /* OpenSans-LightItalic.ttf in Resources */,
+				DAF98E9125ECF9CA0052EDB8 /* PokemonTableViewCell.xib in Resources */,
+				DAF98ECE25EE09EC0052EDB8 /* TypeCollectionViewCell.xib in Resources */,
+				DAF98EAD25ED7B1F0052EDB8 /* OpenSans-Italic.ttf in Resources */,
+				DAF98EAB25ED7B1F0052EDB8 /* OpenSans-BoldItalic.ttf in Resources */,
+				DAF98EA725ED7B1F0052EDB8 /* OpenSans-SemiBold.ttf in Resources */,
+				DAF98EAA25ED7B1F0052EDB8 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				DAF98EA825ED7B1F0052EDB8 /* OpenSans-ExtraBold.ttf in Resources */,
+				DAF98EA625ED7B1F0052EDB8 /* OpenSans-Bold.ttf in Resources */,
+				DAF98EAE25ED7B1F0052EDB8 /* OpenSans-Regular.ttf in Resources */,
 				DAF98E1F25EB9C350052EDB8 /* Assets.xcassets in Resources */,
-				DAF98E1D25EB9C320052EDB8 /* Main.storyboard in Resources */,
+				DAF98EA525ED7B1F0052EDB8 /* OpenSans-Light.ttf in Resources */,
+				DAF98E1D25EB9C320052EDB8 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +448,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF98ED625EE11300052EDB8 /* ImageCache.swift in Sources */,
+				DAF98ECD25EE09EC0052EDB8 /* TypeCollectionViewCell.swift in Sources */,
+				DAF98EC425EDF93A0052EDB8 /* UIColorExtensions.swift in Sources */,
+				DAF98E7B25EBE3550052EDB8 /* Pokemon.swift in Sources */,
+				DAF98E9625ED6C330052EDB8 /* Box.swift in Sources */,
+				DAF98E6D25EBA7950052EDB8 /* NetworkManager.swift in Sources */,
+				DAF98EB525ED7D540052EDB8 /* HomeViewModel.swift in Sources */,
 				DAF98E1A25EB9C320052EDB8 /* HomeViewController.swift in Sources */,
+				DAF98EDB25EE5B2F0052EDB8 /* FoundationExtensions.swift in Sources */,
+				DAF98E9025ECF9CA0052EDB8 /* PokemonTableViewCell.swift in Sources */,
 				DAF98E1625EB9C320052EDB8 /* AppDelegate.swift in Sources */,
+				DAF98E6525EBA5620052EDB8 /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,12 +495,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DAF98E1B25EB9C320052EDB8 /* Main.storyboard */ = {
+		DAF98E1B25EB9C320052EDB8 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DAF98E1C25EB9C320052EDB8 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		DAF98E2025EB9C350052EDB8 /* LaunchScreen.storyboard */ = {
@@ -645,6 +792,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAF98E7225EBA9310052EDB8 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DAF98E7425EBA9310052EDB8 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAF98E0A25EB9C320052EDB8 /* Project object */;
 }

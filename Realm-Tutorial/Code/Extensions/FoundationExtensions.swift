@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+extension Int {
+    func asString() -> String {
+        if (self < 10) {
+            return "0\(self)"
+        } else {
+            return "\(self)"
+        }
+    }
+}
