@@ -13,24 +13,70 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pokemonTableView: UITableView!
     
     // MARK:- variables
+    var homeViewModel: HomeViewModel!
     
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: CGRect(x: 16, y: 8, width: self.pokemonTableView.frame.size.width - 32, height: 72))
+        searchBar.placeholder = "Search for Pokemons"
+        
+        searchBar.delegate = self
+        searchBar.searchBarStyle = .minimal
+        searchBar.barTintColor = UIColor.black
+        searchBar.tintColor = UIColor.black
+        searchBar.showsCancelButton = true
+        searchBar.setShowsCancelButton(false, animated: false)
+        searchBar.showsScopeBar = false
+        
+        let searchBarStyle = searchBar.value(forKey: "searchField") as? UITextField
+        searchBarStyle?.clearButtonMode = .never
+        
+        return searchBar
+    }()
     
     // MARK:- lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.homeViewModel = HomeViewModel()
+//        self.addSearchController()
+        self.addSearchBarInTableView()
         
         self.pokemonTableView.delegate = self
         self.pokemonTableView.dataSource = self
-        
-        self.pokemonTableView.register(UINib(nibName: PokemonTableViewCell().description, bundle: nil), forCellReuseIdentifier: PokemonTableViewCell().description)
-        
+        self.pokemonTableView.register(UINib(nibName: PokemonTableViewCell.description(), bundle: nil), forCellReuseIdentifier: PokemonTableViewCell.description())
+//        self.pokemonTableView.contentInset.top = 20
+       
+        self.homeViewModel.filteredPokemons.bind { [weak self] in
+            if $0 != nil {
+                DispatchQueue.main.async {
+                    self?.pokemonTableView.reloadSections(IndexSet([0]), with: .fade)
+                }
+//                self?.pokemonTableView.inser
+            }
+        }
     }
     
-    // MARK:- outlets & objc functions
-    
     // MARK:- functions
+    func addSearchBarInTableView() {
+        let view = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: UIScreen.main.bounds.width, height: 92)))
+        view.addSubview(searchBar)
+        
+        self.pokemonTableView.tableHeaderView = view
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBar.setShowsCancelButton(true, animated: true)
+        self.homeViewModel.searchPokemons(with: searchText)
+    }
     
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.homeViewModel.resetDataIfNeeded()
+        
+        self.searchBar.text = ""
+        self.searchBar.setShowsCancelButton(false, animated: true)
+        self.searchBar.resignFirstResponder()
+    }
 }
 
 
@@ -38,38 +84,25 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        guard let pokemons = self.homeViewModel.filteredPokemons.value else { return 0 }
+        print("new count", pokemons.count)
+        return pokemons.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(origin: tableView.frame.origin, size: CGSize(width: UIScreen.main.bounds.width, height: 0)))
-        view.backgroundColor = UIColor.white
-        
-        let label = UILabel()
-        label.text = "Pokemons"
-        label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
-        label.frame = CGRect(x: 24, y: 20, width: tableView.frame.size.width - 48, height: label.intrinsicContentSize.height)
-        
-        view.addSubview(label)
-        return view
+        return PokemonTableViewCell().cellHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "haha"
+        guard let pokemons = self.homeViewModel.filteredPokemons.value else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: PokemonTableViewCell.description(), for: indexPath) as! PokemonTableViewCell
+        
+        cell.setupCell(pokemon: pokemons[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.homeViewModel.fetchMoreDataIfNeeded(displayedRow: indexPath.row)
     }
 }
 
