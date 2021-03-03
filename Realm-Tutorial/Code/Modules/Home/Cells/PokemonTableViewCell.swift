@@ -22,8 +22,10 @@ class PokemonTableViewCell: UITableViewCell {
     override class func description() -> String {
         return "PokemonTableViewCell"
     }
+    
     var type: [String] = [] {
         didSet {
+            // reloads the tableView when it's value is set
             self.typeCollectionView.reloadData()
         }
     }
@@ -53,12 +55,9 @@ class PokemonTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        // clear the collectionView and the pokemonImage
         self.type = []
         self.imageView?.image = nil
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
     
     // MARK:- functions

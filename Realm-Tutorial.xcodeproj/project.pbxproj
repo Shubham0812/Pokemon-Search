@@ -15,9 +15,6 @@
 		DAF98E2D25EB9C350052EDB8 /* Realm_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E2C25EB9C350052EDB8 /* Realm_TutorialTests.swift */; };
 		DAF98E3825EB9C350052EDB8 /* Realm_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E3725EB9C350052EDB8 /* Realm_TutorialUITests.swift */; };
 		DAF98E6525EBA5620052EDB8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E6425EBA5620052EDB8 /* RealmManager.swift */; };
-		DAF98E6D25EBA7950052EDB8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */; };
-		DAF98E7325EBA9310052EDB8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DAF98E7225EBA9310052EDB8 /* Realm */; };
-		DAF98E7525EBA9310052EDB8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAF98E7425EBA9310052EDB8 /* RealmSwift */; };
 		DAF98E7B25EBE3550052EDB8 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */; };
 		DAF98E9025ECF9CA0052EDB8 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98E8E25ECF9CA0052EDB8 /* PokemonTableViewCell.swift */; };
 		DAF98E9125ECF9CA0052EDB8 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF98E8F25ECF9CA0052EDB8 /* PokemonTableViewCell.xib */; };
@@ -38,6 +35,8 @@
 		DAF98ECE25EE09EC0052EDB8 /* TypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF98ECC25EE09EB0052EDB8 /* TypeCollectionViewCell.xib */; };
 		DAF98ED625EE11300052EDB8 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98ED525EE11300052EDB8 /* ImageCache.swift */; };
 		DAF98EDB25EE5B2F0052EDB8 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98EDA25EE5B2F0052EDB8 /* FoundationExtensions.swift */; };
+		DAF98EE425EEADCB0052EDB8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAF98EE325EEADCB0052EDB8 /* RealmSwift */; };
+		DAF98EEF25EEDAA40052EDB8 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF98EEE25EEDAA40052EDB8 /* PokemonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		DAF98E3725EB9C350052EDB8 /* Realm_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_TutorialUITests.swift; sourceTree = "<group>"; };
 		DAF98E3925EB9C350052EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF98E6425EBA5620052EDB8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		DAF98E8E25ECF9CA0052EDB8 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		DAF98E8F25ECF9CA0052EDB8 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
@@ -93,6 +91,7 @@
 		DAF98ECC25EE09EB0052EDB8 /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		DAF98ED525EE11300052EDB8 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DAF98EDA25EE5B2F0052EDB8 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		DAF98EEE25EEDAA40052EDB8 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF98E7525EBA9310052EDB8 /* RealmSwift in Frameworks */,
-				DAF98E7325EBA9310052EDB8 /* Realm in Frameworks */,
+				DAF98EE425EEADCB0052EDB8 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +176,6 @@
 				DAF98E7925EBB3430052EDB8 /* Models */,
 				DAF98E5025EB9D190052EDB8 /* Modules */,
 				DAF98E5825EB9DFB0052EDB8 /* Services */,
-				DAF98E6325EB9E430052EDB8 /* Utils */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				DAF98E6425EBA5620052EDB8 /* RealmManager.swift */,
-				DAF98E6C25EBA7950052EDB8 /* NetworkManager.swift */,
 				DAF98ED525EE11300052EDB8 /* ImageCache.swift */,
 			);
 			path = Services;
@@ -228,17 +224,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		DAF98E6325EB9E430052EDB8 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		DAF98E7925EBB3430052EDB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DAF98E7A25EBE3550052EDB8 /* Pokemon.swift */,
+				DAF98EEE25EEDAA40052EDB8 /* PokemonType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,8 +306,7 @@
 			);
 			name = "Realm-Tutorial";
 			packageProductDependencies = (
-				DAF98E7225EBA9310052EDB8 /* Realm */,
-				DAF98E7425EBA9310052EDB8 /* RealmSwift */,
+				DAF98EE325EEADCB0052EDB8 /* RealmSwift */,
 			);
 			productName = "Realm-Tutorial";
 			productReference = DAF98E1225EB9C320052EDB8 /* Realm-Tutorial.app */;
@@ -391,7 +380,7 @@
 			);
 			mainGroup = DAF98E0925EB9C320052EDB8;
 			packageReferences = (
-				DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DAF98EE225EEADCB0052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = DAF98E1325EB9C320052EDB8 /* Products */;
 			projectDirPath = "";
@@ -451,9 +440,9 @@
 				DAF98ED625EE11300052EDB8 /* ImageCache.swift in Sources */,
 				DAF98ECD25EE09EC0052EDB8 /* TypeCollectionViewCell.swift in Sources */,
 				DAF98EC425EDF93A0052EDB8 /* UIColorExtensions.swift in Sources */,
+				DAF98EEF25EEDAA40052EDB8 /* PokemonType.swift in Sources */,
 				DAF98E7B25EBE3550052EDB8 /* Pokemon.swift in Sources */,
 				DAF98E9625ED6C330052EDB8 /* Box.swift in Sources */,
-				DAF98E6D25EBA7950052EDB8 /* NetworkManager.swift in Sources */,
 				DAF98EB525ED7D540052EDB8 /* HomeViewModel.swift in Sources */,
 				DAF98E1A25EB9C320052EDB8 /* HomeViewController.swift in Sources */,
 				DAF98EDB25EE5B2F0052EDB8 /* FoundationExtensions.swift in Sources */,
@@ -794,7 +783,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		DAF98EE225EEADCB0052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -805,14 +794,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DAF98E7225EBA9310052EDB8 /* Realm */ = {
+		DAF98EE325EEADCB0052EDB8 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		DAF98E7425EBA9310052EDB8 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAF98E7125EBA9310052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = DAF98EE225EEADCB0052EDB8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

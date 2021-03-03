@@ -59,31 +59,16 @@ class RealmManager {
 extension RealmManager: RealmOperations {
     /// Writes to Realm
     fileprivate static func write<T: Object>(_ object: T? = nil, block: @escaping ((Realm, T?) -> Void)) {
-        var objectRef : ThreadSafeReference<T>? = nil
-        
-        // Check if object is not nil, and it is a Realm Managed Object. Convert it to a thread safe reference.
-        if let object = object, object.realm != nil {
-            objectRef = ThreadSafeReference(to: object)
-        }
-        
         DispatchQueue(label: "realm").sync {
             autoreleasepool {
                 let currentRealm = realmInstance()
-                var newObject : T? = nil
-                // Resolve object to Realm Object. If that is not possible take newObject as the original Object,
-                if let objectRef = objectRef {
-                    guard let resolvedObject = currentRealm.resolve(objectRef) else { return }
-                    newObject = resolvedObject
-                } else {
-                    newObject = object
-                }
-                
+
                 if currentRealm.isInWriteTransaction {
                     return
                 } else {
                     do {
                         try currentRealm.write {
-                            block(currentRealm, newObject)
+                            block(currentRealm, object)
                         }
                     } catch {
                         return
@@ -175,7 +160,7 @@ extension RealmManager {
     }
     
     func getPokemonsByType(query: String) -> [Pokemon] {
-        let pokemons = RealmManager.get(fromEntity: Pokemon.self, withPredicate: NSPredicate(format: "type beginswith[cd] %@", query),
+        let pokemons = RealmManager.get(fromEntity: Pokemon.self, withPredicate: NSPredicate(format: "type contains[cd] %@", query),
                                         sortedByKey: "id", inAscending: true)
         return Array(pokemons)
     }

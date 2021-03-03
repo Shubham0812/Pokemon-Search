@@ -37,20 +37,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeViewModel = HomeViewModel()
-//        self.addSearchController()
         self.addSearchBarInTableView()
         
         self.pokemonTableView.delegate = self
         self.pokemonTableView.dataSource = self
         self.pokemonTableView.register(UINib(nibName: PokemonTableViewCell.description(), bundle: nil), forCellReuseIdentifier: PokemonTableViewCell.description())
-//        self.pokemonTableView.contentInset.top = 20
        
         self.homeViewModel.filteredPokemons.bind { [weak self] in
             if $0 != nil {
                 DispatchQueue.main.async {
-                    self?.pokemonTableView.reloadSections(IndexSet([0]), with: .fade)
+                    self?.pokemonTableView.reloadData()
                 }
-//                self?.pokemonTableView.inser
             }
         }
     }
@@ -71,7 +68,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.homeViewModel.resetDataIfNeeded()
+        self.homeViewModel.resetData()
         
         self.searchBar.text = ""
         self.searchBar.setShowsCancelButton(false, animated: true)

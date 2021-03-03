@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK:- functions‹
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        storeData()
+        let pokemonsStoredInRealm = UserDefaults.standard.bool(forKey: "pokemonsStored")
+        
+        if (!pokemonsStoredInRealm) {
+            UserDefaults.standard.set(true, forKey: "pokemonsStored")
+            storeData()
+        }
+        
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
         return true
     }
@@ -27,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (error == nil) {
                 guard let data = data else { return }
                 do {
-                    let pokemonResponse = try JSONDecoder().decode(PokemonResponse.self, from: data)
-                    print("Pokemon count", pokemonResponse.pokemon.count)
+                    let pokemonResponse = try JSONDecoder().decode([String: [Pokemon]].self, from: data)
+                    guard let pokemons = pokemonResponse["pokemon"] else { return }
                     
                     /// ADD & STORE the data to Realm
-                    RealmManager.add(pokemonResponse.pokemon)
+                    RealmManager.add(pokemons)
                 } catch { print(error) }
             }
         }
